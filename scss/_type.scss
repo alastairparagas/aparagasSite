@@ -1,0 +1,44 @@
+/*
+Rems - relative to HTML document's font-size versus EM - relative
+to parent element. Mobile first approach - if browser has no media
+query, use mobile font-size first because it may be an old phone
+or old computer - low resolution, font sizing will be okay anyway.
+*/
+
+html{
+    font-family: 'Lato', sans-serif;
+    font-size:62.5%;
+}
+
+body{
+    font-size:1.25rem;
+}
+
+@media (min-width: 0px){ 
+    body {
+        font-size:1.25rem;
+    } 
+}
+@media (min-width: 640px){ 
+    body {
+        font-size:1.3rem;
+    } 
+} 
+@media (min-width:960px) {
+    body {
+        font-size:1.35rem;
+    } 
+} 
+@media (min-width:1100px) { 
+    body {
+        font-size:1.4rem;
+    } 
+}
+
+body{
+     line-height:160%;
+ }
+ 
+ .right{
+     text-align:right;
+ }

@@ -1,0 +1,75 @@
+$base-color : #444; // Default color of site font
+$primary-color: #3a6b8b;    // Primary color for background
+$primary-color-text: #7EB7DC;
+$secondary-color: #3498db;
+$secondary-color-text: white;
+$tertiary-color: #e67e22;
+$tertiary-color-text: white;
+
+body{
+    color:$base-color;
+}
+
+header{
+    background: $primary-color;
+    color: $primary-color-text;
+    *{
+        color:inherit;
+    }
+    li:hover{
+        color:white;
+    }
+    a h1{
+        color:white;
+    }
+    
+}
+
+#leaderboard{
+    background: $secondary-color;
+    color: $secondary-color-text;
+    padding-bottom:20px;
+    *{
+        color:inherit;
+    }
+    img{
+        margin-top:40px;
+    }
+    a{
+        text-decoration:none;
+        padding:10px;
+        border-radius:20px;
+        display:inline-block;
+        &:hover{
+            background:darken($secondary-color, 10%);
+        }
+    }
+}
+
+#aboutMore{
+    h2 i{
+        color:lighten($base-color, 10%);
+    }
+}
+
+.alert{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    &-success{
+        background: #1ab394;   
+    }
+}
+
+footer{
+    background: $primary-color;
+    color: $tertiary-color-text;
+    *{
+        color:inherit;
+    }
+}
+
+i.fa {
+        margin-right:10px;
+}
+

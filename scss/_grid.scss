@@ -1,0 +1,103 @@
+$column-width: 100% / 12;
+
+@for $grid-unit from 1 through 12{
+    .grid-#{$grid-unit}{
+        width: $column-width * $grid-unit;
+        float: left;
+        display: block;
+        height: 100%;
+        &:before{
+            display: inline-block;
+            vertical-align: middle;
+            content: '';
+            width: 0;
+            height: 100%;
+            margin-left: -0.25em;
+        }
+    }
+    .offset-#{$grid-unit}{
+        margin-left:$column-width * $grid-unit;
+    }
+}
+
+.row, .row-full{
+    display:block;
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.row{
+    width:1200px;
+    margin:0 auto;
+}
+
+.row-full{
+    width:100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .row{
+        width:100%;
+        margin:0;
+    }
+}
+@media only screen and (max-width: 780px) {
+    div,nav{
+        &[class*="grid"]{
+            display:block;
+            width:100%;
+        }
+        &[class*="offset"]{
+            margin-left:0;
+        }
+    }
+}
+
+img{
+    width:70%;
+    margin-left:15%;
+    margin-right:15%;
+}
+
+img.round{
+    border-radius:100%;
+}
+
+.pad{
+    padding-left:10px;
+    padding-right:10px;
+}
+.pad-y{
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.pad-all{
+    @extend .pad;
+    @extend .pad-y;
+}
+
+form{
+    div{
+        display:block;
+        margin-top:15px;
+        margin-bottom:15px;
+    }
+    div:first-child{
+        margin-top:0px;
+    }
+    div:last-child{
+        margin-bottom:0px;
+    }
+    label{
+        display:inline;
+    }
+    input,textarea{
+        display:block;
+        margin:0;
+        padding:5px;
+        width:100%;
+    }
+}
